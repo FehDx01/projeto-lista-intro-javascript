@@ -3,16 +3,20 @@
 // EXERCÍCIO 0A
 function soma(num1, num2) {
   // implemente sua lógica aqui
+  num1 = 1
+  num2 = 2
   return num1 + num2
 }
+soma(num1, num2)
 
 // EXERCÍCIO 0B
 function imprimeMensagem() {
   // implemente sua lógica aqui
-  const mensagem = prompt('Digite uma mensagem!')
+  const mensagem = prompt('insira uma mensagem')
 
   console.log(mensagem)
 }
+
 
 // EXERCÍCIOS PARA FAZER ------------------------------------------------------------------
 
@@ -20,17 +24,31 @@ function imprimeMensagem() {
 function calculaAreaRetangulo() {
   // implemente sua lógica aqui
 
+  const altura = prompt("insira a altura")
+  const largura = prompt("insira a largura")
+  console.log(altura * largura)
+
 }
 
 // EXERCÍCIO 02
 function imprimeIdade() {
   // implemente sua lógica aqui
 
+const anoAtual = prompt("qual o ano atual?")
+const anoNascimento = prompt("Que ano você nasceu")
+console.log(anoAtual - anoNascimento)
+
 }
 
 // EXERCÍCIO 03
 function calculaIMC(peso, altura) {
   // implemente sua lógica aqui
+
+  let pesoAtual = prompt("insira seu peso")
+  let alturaAtual = prompt("insira sua altura")
+  imc = pesoAtual / (alturaAtual * alturaAtual)
+  
+  return imc
 
 }
 
