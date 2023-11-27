@@ -160,14 +160,36 @@ return igualdade
 function checaRenovacaoRG() {
   // implemente sua lógica aqui
 
-  
+  const anoAtual = +prompt("Informe o ano Atual")
+  const anoNascimento = +prompt("Informe seu ano de nascimento")
+  const anoRg = +prompt("Informe ano emissão RG")
 
+  idadeIgual20 = (anoAtual - anoNascimento) <= 20
 
+  idadeMaior20Menor50 = (anoAtual - anoNascimento) > 20 || (anoAtual - anoNascimento) <= 50
+
+  idadeMais50 = anoAtual - anoNascimento > 50
+
+  anoAtual - anoRg >= 5 == renova5
+  anoAtual - anoRg == 10 == renova10
+  anoAtual - anoRg == 15 == renova15
+ 
+  calculo1 = idadeIgual20 || renova5
+  calculo2 = idadeMaior20Menor50 || renova10
+  calculo3 = idadeMais50 || renova15
+
+  console.log(calculo1, calculo2, calculo3);
 }
 
 // EXERCÍCIO 14
 function checaAnoBissexto(ano) {
   // implemente sua lógica aqui
+
+  const divisivelPor4 = ano % 4 === 0
+  const divisivelPor100 = ano % 100 === 0
+  const divisivelPor400 = ano % 400 === 0
+  
+  return (divisivelPor4 && !divisivelPor100) || divisivelPor400
 
 }
 
